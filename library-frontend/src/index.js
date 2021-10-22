@@ -27,6 +27,16 @@ export const ALL_AUTHORS = gql`
   }
 `;
 
+export const ALL_BOOKS = gql`
+  query {
+    allBooks {
+      title
+      author
+      published
+    }
+  }
+`;
+
 client.query({ query: ALL_AUTHORS }).then((response) => {
   console.log(response.data);
 });
